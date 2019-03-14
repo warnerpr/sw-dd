@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# This Python file uses the following encoding: utf-8
 
 """ Parse the entries in /var/log/syslog, exract the metric logs from SolarWinds, example logs:
 
