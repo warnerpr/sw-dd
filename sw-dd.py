@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+""" Parse the entries in /var/log/syslog, exract the metric logs from SolarWinds, example logs:
+
+2019-03-14T04:58:40-07:00 vawvorion01 %OrionAlertEngine: 6d93a7e062bababffbd3e9ab3a3abdc7 cienam-sterling-2840311_Primary (VZ Internet) - GigabitEthernet0/0/2 · CPE_WAN Circuit ID(C0101446)   |  RX 11 %  |  TX 6 %
+2019-03-14T05:08:40-07:00 vawvorion01 %OrionAlertEngine: 6d93a7e062bababffbd3e9ab3a3abdc7 cienam-sterling-2840311_Primary (VZ Internet) - GigabitEthernet0/0/2 · CPE_WAN Circuit ID(C0101446)   |  RX 13 %  |  TX 11 %
+2019-03-14T05:18:41-07:00 vawvorion01 %OrionAlertEngine: 6d93a7e062bababffbd3e9ab3a3abdc7 cienam-sterling-2840311_Primary (VZ Internet) - GigabitEthernet0/0/2 · CPE_WAN Circuit ID(C0101446)   |  RX 12 %  |  TX 7 %
+
+"""
+
 import os
 import re
 import time
