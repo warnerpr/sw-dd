@@ -37,7 +37,7 @@ while True:
             data = match.groupdict()
             connection = data['connection'].replace(' ', '').replace('(', '').replace(')', '').replace('-', '').replace('_', '')
             ts = (parser.parse(data['date']) - datetime(1970, 1, 1, tzinfo=pytz.UTC)).total_seconds()
-            print ts
+            print ts, data['date'], data['host'], connection, data['tx'], data['rx']
             for direction in ('tx', 'rx'):
                 print api.Metric.send(
                     host=data['host'],
